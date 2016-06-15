@@ -2,7 +2,7 @@ MLP Classifier
 ==========================
 A *Handwritten* **Multilayer Perceptron Classifier**
 
-This python implementation is an extension of artifical neural network discussed in [Python Machine Learning](https://github.com/rasbt/python-machine-learning-book) and  [Neural networks and Deep learning](neuralnetworksanddeeplearning.com) by extending the ANN to **deep** neural network &  including **softmax layers**, along with **log-likelihood** *loss function* and **L1** and **L2** *regularization techniques*.
+This python implementation is an extension of artifical neural network discussed in [Python Machine Learning](https://github.com/rasbt/python-machine-learning-book) and  [Neural networks and Deep learning](http://neuralnetworksanddeeplearning.com) by extending the ANN to **deep** neural network &  including **softmax layers**, along with **log-likelihood** *loss function* and **L1** and **L2** *regularization techniques*.
 
 ### Some Basics
 An artificial neuron is mathematical function conceived as a model of biological neurons. Each of the nodes in the diagram is a a neuron, which transfer their information to the next layer through transfer function.
@@ -38,5 +38,5 @@ The output from the softmax layer can be thought of as a probability distributio
 ![](https://lh3.googleusercontent.com/JgWz6nNbk0o1WE18hov7btuwE8-0LT47Bk8Gri6Fg8J1JTFyLGQtyOaABDNJXF_Xfjbss3RwBmOi_OZ68NUUjXszg-6ItyMuay0p7tVRMie9Q-hCudkHbD0nwQ5oxJ7n5eQaTTX55B-X43PTa6tdhMNML6ta6QUy33ItKBbfcTHT476mjg4BBtxtx7GJ-j0uhkEXnH6_pE2j4LppIKHzfW-XTh3qLbZHYDHLvc9-1uF416TH6o-rdzotQslamELbl-l4rr2flodETrQmvb2Nq_dMJV7K8upsPNBZ1AL1q7uk0Bq7A43Sj46RbIsTt0wgiucWU0XdoG5i2YOYVmM-Q0xOMBiYOcA7rqgnH0E07yjzR_Nc71p3R8kieGr42v7GmsrsorxFtmBKeqfixEfvu4ZHfSgRfROZk-KFm1I0i_1pvibHsCOZFjbUdYrCMkW0KDWA_AsYnXop7jJ1AfHbTNff9EhtS4BB0Cu4Khj-bnyM_ztnWnbj10z860Lqj28VBTVcZXLtbKZVdM-dxfM7FfpuU55CSyHsY16oUGrWkSB1JjBmV6MS-nfI-tVtAWkrS2OVkWkfJuRKJT7S3leK-L8sWg=w206-h106-no)  
 In many problems it is convenient to be able to interpret the output activation ***O(j)*** as the network's estimate of the probability that the correct output is ***j***.
 
-Refer [these notes](https://www.ics.uci.edu/~pjsadows/notes.pdf) for calculus of softmax function.
-[Source]( http://yann.lecun.com/exdb/mnist/) of MNIST training data-set.
+Refer these [notes](https://www.ics.uci.edu/~pjsadows/notes.pdf) for calculus of softmax function.  
+[Source](http://yann.lecun.com/exdb/mnist/) of MNIST training data-set.
