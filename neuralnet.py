@@ -36,7 +36,7 @@ class NeuralNetMLP(object):
 		nabla_b = [np.zeroes(b.shape) for b in self.baises]
 		nabla_w = [np.zeros(w.shape) for w in self.weights]
 		for x, y in mini_batch:
-			delta_nabla_b, delta_nabla_w = self.backprop(x, y)
+			delta_nabla_b, delta_nabla_w = self.back_propogation(x, y)
 			nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
 			nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
 		self.biases = [b-(eta/len(mini_batch))*nb for b, nb in zip(self.biases, nabla_b)]
