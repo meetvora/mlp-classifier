@@ -12,15 +12,15 @@ class NeuralNetMLP(object):
 
 	def initialize_weights(self):
 		""" Randomly generate biases and weights for hidden layers. 
-			Weights have a Gaussian distribution with mean 0 and
-			standard deviation 1 over the square root of the number
-			of weights connecting to the same neuron """
+		Weights have a Gaussian distribution with mean 0 and
+		standard deviation 1 over the square root of the number
+		of weights connecting to the same neuron """
 		self.biases = [np.random.randn(y, 1) for y in self.layers[1:]]
 		self.weights = [np.random.randn(y, x)/np.sqrt(x) for x, y in zip(self.layers[:-1], self.layers[1:])]
 
 	def fit(self, training_data, l1=0.0, l2=0.0, epochs=500, eta=0.001, minibatches=1, regularization = L2):
 		""" Fits the parameters according to training data.
-			l1(2) is the L1(2) regularization coefficient. """
+		l1(2) is the L1(2) regularization coefficient. """
 		self.l1 = l1
 		self.l2 = l2
 		n = len(training_data)
@@ -32,7 +32,7 @@ class NeuralNetMLP(object):
 
 	def batch_update(self, mini_batch, eta, n, regularization=L2):
 		""" Update the network's weights and biases by applying gradient
-			descent using backpropagation to a single mini batch. """
+		descent using backpropagation to a single mini batch. """
 		nabla_b = [np.zeroes(b.shape) for b in self.biases]
 		nabla_w = [np.zeros(w.shape) for w in self.weights]
 		for x, y in mini_batch:
@@ -48,9 +48,9 @@ class NeuralNetMLP(object):
 
 	def back_propogation(self, x, y, fn = SIGMOID):
 		""" Gradient for cost function is calculated from a(L) and 
-			back-propogated to the input layer.
-			Cross Entropy cost functionis associated with sigmoid neurons, while
-			Log-Likelihood cost function is associated with softmax neurons."""
+		back-propogated to the input layer.
+		Cross Entropy cost functionis associated with sigmoid neurons, while
+		Log-Likelihood cost function is associated with softmax neurons."""
 		nabla_b = [np.zeros(b.shape) for b in self.biases]
 		nabla_w = [np.zeros(w.shape) for w in self.weights]
 		activation = x
