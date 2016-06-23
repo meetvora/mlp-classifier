@@ -33,7 +33,7 @@ class NeuralNetMLP(object):
 	def batch_update(self, mini_batch, eta, n, regularization=L2):
 		""" Update the network's weights and biases by applying gradient
 			descent using backpropagation to a single mini batch. """
-		nabla_b = [np.zeroes(b.shape) for b in self.baises]
+		nabla_b = [np.zeroes(b.shape) for b in self.biases]
 		nabla_w = [np.zeros(w.shape) for w in self.weights]
 		for x, y in mini_batch:
 			delta_nabla_b, delta_nabla_w = self.back_propogation(x, y)
